@@ -27,7 +27,7 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/rmesadieu",
+    href: "https://github.com/rmesa19/",
   },
   {
     icon: Linkedin,

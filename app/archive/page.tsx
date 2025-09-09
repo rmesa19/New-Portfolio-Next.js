@@ -1,59 +1,60 @@
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import projects from "@/data/projects.json"
 
 export default function ArchivePage() {
   // Example data (you can replace with your own)
-  const projects = [
-    {
-      year: "2025",
-      title: "Personal Portfolio",
-      made_at: "Personal Project",
-      description: "A reactive portfolio showcasing my skillset and experience",
-      tech: "Next.js, Tailwind, TypeScript",
-      link: null,
-    },
-    {
-      year: "2022",
-      title: "Distributed Chatroom",
-      made_at: "Northeastern University",
-      description: "Auto reconnect and load balanced Distributed 2-Phase Commit(2PC) Chatroom application built using Java RMI (Remote Method Invocation) utilizing Pub/Sub paridigm. Built to facilitate realtime communication between users.",
-      tech: "Java RMI, Java, TCP/IP",
-      link: "https://github.com/rmesa19/Distributed-ChatRoom/tree/main",
-    },  
-    {
-      year: "2023",
-      title: "Funko Shop",
-      made_at: "Northeastern University",
-      description: "REACT app for taking inventory, comparing and trading Funko Pop collection", 
-      tech: "MongoDB, Express.js, React.js, Node.js",
-      link: "https://github.com/rmesa19/The-Funko-Shop/tree/main",
-    },
-    {
-      year: "2024",
-      title: "ETL Data Pipeline",
-      made_at: "Fitch Group",
-      description: "Data pipeline for the extraction, transformation and loading of airport data stored in JSON format within various SQL Tables",
-      tech: "Python, Airflow, AWS",
-      link: null,
-    },
-    {
-      year: "2025",
-      title: "Queens New York Fun Facts API",
-      made_at: "Personal Project",
-      description: "API built using Express framework, hosted via Vercel that pulls facts and tidbits about Queens, NY.",
-      tech: "Node.js, Express.js, Vercel",
-      link: null,
-    },
-    {
-      year: "2025",
-      title: "Queens New York Fun Facts Database",
-      made_at: "Personal Project",
-      description: "Postgres Database built using data scraper that stores fun facts about Queens, NY across all neighborhoods in 10 categories.",
-      tech: "Python, Postgres",
-      link: null,
-    },
+  // const projects = [
+  //   {
+  //     year: "2025",
+  //     title: "Personal Portfolio",
+  //     made_at: "Personal Project",
+  //     description: "A reactive portfolio showcasing my skillset and experience",
+  //     tech: "Next.js, Tailwind, TypeScript",
+  //     link: null,
+  //   },
+  //   {
+  //     year: "2022",
+  //     title: "Distributed Chatroom",
+  //     made_at: "Northeastern University",
+  //     description: "Auto reconnect and load balanced Distributed 2-Phase Commit(2PC) Chatroom application built using Java RMI (Remote Method Invocation) utilizing Pub/Sub paridigm. Built to facilitate realtime communication between users.",
+  //     tech: "Java RMI, Java, TCP/IP",
+  //     link: "https://github.com/rmesa19/Distributed-ChatRoom/tree/main",
+  //   },  
+  //   {
+  //     year: "2023",
+  //     title: "Funko Shop",
+  //     made_at: "Northeastern University",
+  //     description: "REACT app for taking inventory, comparing and trading Funko Pop collection", 
+  //     tech: "MongoDB, Express.js, React.js, Node.js",
+  //     link: "https://github.com/rmesa19/The-Funko-Shop/tree/main",
+  //   },
+  //   {
+  //     year: "2024",
+  //     title: "ETL Data Pipeline",
+  //     made_at: "Fitch Group",
+  //     description: "Data pipeline for the extraction, transformation and loading of airport data stored in JSON format within various SQL Tables",
+  //     tech: "Python, Airflow, AWS",
+  //     link: null,
+  //   },
+  //   {
+  //     year: "2025",
+  //     title: "Queens New York Fun Facts API",
+  //     made_at: "Personal Project",
+  //     description: "API built using Express framework, hosted via Vercel that pulls facts and tidbits about Queens, NY.",
+  //     tech: "Node.js, Express.js, Vercel",
+  //     link: null,
+  //   },
+  //   {
+  //     year: "2025",
+  //     title: "Queens New York Fun Facts Database",
+  //     made_at: "Personal Project",
+  //     description: "Postgres Database built using data scraper that stores fun facts about Queens, NY across all neighborhoods in 10 categories.",
+  //     tech: "Python, Postgres",
+  //     link: null,
+  //   },
     
-  ];
+  // ];
 
   const sortedProjects = projects.sort((a,b)=> Number(b.year) - Number(a.year));
 

@@ -4,56 +4,57 @@ import { Card } from "@/components/ui/card"
 import { MapPin } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
+import experiences from "@/data/experiences.json"
 
-const experiences = [
-  {
-    title: "Software Engineer",
-    company: "Fitch Group",
-    link:"https://www.fitch.group/",
-    logo: "/fitchgroup_logo.jpeg",
-    location: "New York, NY",
-    period: "Sep 2023 - Present",
-    description:
-      "Build, maintain and optimize scalable REST APIs using Java Spring Boot, serving real-time Bloomberg bond data to customer-facing applications.",
-    achievements: [
-      "Reduced API latency and response time by 24%",
-      "Engineered ETL pipeline processing 30,000+ financial records",
-      "Decreased deployment time by 30% through microservice transition",
-      "Cut GraphQL request payload size by 27%",
-      "Increased release frequency by 25% with automated CI/CD",
-    ],
-  },
-  {
-    title: "Software Engineer",
-    company: "Northwell Health",
-    link: "https://www.northwell.edu/",
-    logo: "/northwell-logo.png",
-    location: "New York, NY",
-    period: "Dec 2022 - Aug 2023",
-    description:
-      "Developed secure, cloud-native applications using Java Spring Boot and GraphQL to support messaging for 890+ healthcare facilities.",
-    achievements: [
-      "Achieved 97.9% uptime for healthcare messaging systems",
-      "Integrated Azure Cloud services for scalable deployment",
-      "Implemented GraphQL interfaces for real-time data transactions",
-      "Ensured HIPAA compliance and security standards",
-    ],
-  },
-  {
-    title: "Software Engineer Intern",
-    company: "Lyft",
-    link: "https://www.lyft.com/",
-    logo: "/lyft-logo.png",
-    location: "New York, NY",
-    period: "Jun 2022 - Sep 2022",
-    description: "Migrated mobile UI experiences to web using React and TypeScript for the RiderWeb platform.",
-    achievements: [
-      "Reduced average API call latency by 27%",
-      "Designed couponing and discount systems",
-      "Worked with Node.js backend and Kotlin services",
-    ],
-  },
-]
+// const experiences = [
+//   {
+//     title: "Software Engineer",
+//     company: "Fitch Group",
+//     link:"https://www.fitch.group/",
+//     logo: "/fitchgroup_logo.jpeg",
+//     location: "New York, NY",
+//     period: "Sep 2023 - Present",
+//     description:
+//       "Build, maintain and optimize scalable REST APIs using Java Spring Boot, serving real-time Bloomberg bond data to customer-facing applications.",
+//     achievements: [
+//       "Reduced API latency and response time by 24%",
+//       "Engineered ETL pipeline processing 30,000+ financial records",
+//       "Decreased deployment time by 30% through microservice transition",
+//       "Cut GraphQL request payload size by 27%",
+//       "Increased release frequency by 25% with automated CI/CD",
+//     ],
+//   },
+//   {
+//     title: "Software Engineer",
+//     company: "Northwell Health",
+//     link: "https://www.northwell.edu/",
+//     logo: "/northwell-logo.png",
+//     location: "New York, NY",
+//     period: "Dec 2022 - Aug 2023",
+//     description:
+//       "Developed secure, cloud-native applications using Java Spring Boot and GraphQL to support messaging for 890+ healthcare facilities.",
+//     achievements: [
+//       "Achieved 97.9% uptime for healthcare messaging systems",
+//       "Integrated Azure Cloud services for scalable deployment",
+//       "Implemented GraphQL interfaces for real-time data transactions",
+//       "Ensured HIPAA compliance and security standards",
+//     ],
+//   },
+//   {
+//     title: "Software Engineer Intern",
+//     company: "Lyft",
+//     link: "https://www.lyft.com/",
+//     logo: "/lyft-logo.png",
+//     location: "New York, NY",
+//     period: "Jun 2022 - Sep 2022",
+//     description: "Migrated mobile UI experiences to web using React and TypeScript for the RiderWeb platform.",
+//     achievements: [
+//       "Reduced average API call latency by 27%",
+//       "Designed couponing and discount systems",
+//       "Worked with Node.js backend and Kotlin services",
+//     ],
+//   },
+// ]
 
 export function ExperienceSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)

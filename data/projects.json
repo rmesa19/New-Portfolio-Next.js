@@ -1,12 +1,13 @@
 [
   {
     "id": 1,
-    "year":"2023",
+    "year":"2024",
     "title": "Financial Data API Platform",
     "description": "Scalable REST APIs serving real-time Bloomberg bond data. Reduced latency by 24% through query optimization.",
     "made_at": "Fitch Group",
     "image": "/financial-dashboard.png",
     "tags": ["Java", "Spring Boot", "GraphQL", "Bloomberg API", "Oracle SQL"],
+    "tech":"Java SpringBoot, Oracle SQL, Bamboo, Java Persistence API",
     "featured": false
   },
   {
@@ -16,7 +17,8 @@
     "made_at": "Northwell Health",
     "description": "Cloud-native application supporting 890+ healthcare facilities with 97.9% uptime.",
     "image": "/secure-healthcare-messaging.png",
-    "tags": ["Java", "Azure Functions", "GraphQL", "HIPAA Compliance"],
+    "tags": ["Java", "Azure Functions", "RabbitMQ", "HIPAA Compliance"],
+    "tech": "Java, Microsoft Azure, RabbitMQ, Git",
     "featured": false
   },
   {
@@ -33,30 +35,36 @@
   },
   {
     "id": 4,
+    "year":"2023",
     "title": "Monolithic Architecture Restructuring",
     "made_at":"Fitch Group",
     "description": "Transitioned monolithic systems to microservices, reducing deployment time by 30%",
     "image": "/microservices-containers-diagram.png",
     "tags": ["Kubernetes", "Docker", "Microservices", "CI/CD"],
+    "tech":"Kubernetes, Docker, Bitbucket, Python",
     "featured": false
   },
   {
     "id": 5,
+    "year":"2022",
     "title": "RiderWeb Platform Migration",
     "made_at":"Lyft",
     "description": "Migrated mobile UI to web using React and TypeScript for Lyft's platform",
     "image": "/riderweb.png",
     "tags": ["React", "TypeScript", "Node.js", "Kotlin"],
+    "tech": "React, Typescript, Kotlin, Node.js",
     "link":"https://ride.lyft.com/",
     "featured": false
   },
   {
     "id": 6,
+    "year":"2023",
     "title": "Performance Optimization Suite",
     "made_at":"Fitch Group",
     "description": "Database query optimization and API performance tuning for real-time systems",
     "image": "/performance-monitoring-dashboard.png",
     "tags": ["PostgreSQL", "Datadog", "Java Springboot"],
+    "tech": "PostgresSQL, Datadog, Java Springboot",
     "featured": false
   },
   {
@@ -100,7 +108,7 @@
     {
         "id":11,
       "year": "2025",
-      "title": "Queens New York Fun Facts API",
+      "title": "Queens New York Borough Facts API",
       "made_at": "Personal Project",
       "description": "API built using Express framework, hosted via Vercel that pulls facts and tidbits about Queens, NY.",
       "tech": "Node.js, Express.js, Vercel",
@@ -113,7 +121,7 @@
     {
         "id":12,
       "year": "2025",
-      "title": "Queens New York Fun Facts Database",
+      "title": "Queens New York Borough Facts Database",
       "made_at": "Personal Project",
       "description": "Postgres Database built using data scraper that stores fun facts about Queens, NY across all neighborhoods in 10 categories.",
       "tech": "Python, Postgres",

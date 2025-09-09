@@ -34,7 +34,7 @@ export function HeroSection() {
         <h1 className="text-4xl md:text-5xl text-foreground mb-6">Rodolph Mesadieu</h1>
         <h2 className="text-2xl md:text-4xl text-primary mb-8 font-medium">Fullstack Software Engineer</h2>
         <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto font-open-sans leading-relaxed">
-          I design, develop and deploy scalable, robust backend systems, distributed infrastructure, and visually appealing frontend displays.
+          I create innovative business solutions through the design, development and deployment of scalable, robust backend systems, distributed infrastructure, and visually appealing frontend displays in alignment with business strategy.
         </p>
         {/* </CHANGE> */}
 
