@@ -23,7 +23,6 @@ const skills = [
     description: "Kubernetes (EKS), Azure Functions, CI/CD, Datadog",
   },
 ]
-// </CHANGE>
 
 export function AboutSection() {
   return (

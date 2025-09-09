@@ -1,68 +1,76 @@
 "use client"
-
-import { useState } from "react"
+import { useMemo } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
-import { useRouter } from "next/navigation"
+import { Github } from "lucide-react"
 import Link from "next/link"
 
-const projects = [
-  {
-    id: 1,
-    title: "Financial Data API Platform",
-    description: "Scalable REST APIs serving real-time Bloomberg bond data with 24% latency reduction",
-    image: "/financial-dashboard.png",
-    tags: ["Java", "Spring Boot", "GraphQL", "Bloomberg API"],
-    featured: true,
-  },
-  {
-    id: 2,
-    title: "Healthcare Messaging System",
-    description: "Cloud-native application supporting 890+ healthcare facilities with 97.9% uptime",
-    image: "/secure-healthcare-messaging.png",
-    tags: ["Java", "Azure Functions", "GraphQL", "HIPAA Compliance"],
-    featured: true,
-  },
-  {
-    id: 3,
-    title: "ETL Data Pipeline",
-    description: "Python-based pipeline processing 30,000+ financial records from Oracle databases",
-    image: "/data-pipeline-flowchart.png",
-    tags: ["Python", "SQL", "Oracle", "ETL"],
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "Microservices Architecture",
-    description: "Transitioned monolithic systems to microservices, reducing deployment time by 30%",
-    image: "/microservices-containers-diagram.png",
-    tags: ["Kubernetes", "Docker", "Microservices", "CI/CD"],
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "RiderWeb Platform Migration",
-    description: "Migrated mobile UI to web using React and TypeScript for Lyft's platform",
-    image: "/placeholder-fmev2.png",
-    tags: ["React", "TypeScript", "Node.js", "Kotlin"],
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Performance Optimization Suite",
-    description: "Database query optimization and API performance tuning for real-time systems",
-    image: "/performance-monitoring-dashboard.png",
-    tags: ["PostgreSQL", "Redis", "Datadog", "Performance Tuning"],
-    featured: false,
-  },
-]
-// </CHANGE>
+import projects from "@/data/projects.json"
+// const projects = [
+//   {
+//     id: 1,
+//     title: "Financial Data API Platform",
+//     description: "Scalable REST APIs serving real-time Bloomberg bond data with 24% latency reduction",
+//     image: "/financial-dashboard.png",
+//     tags: ["Java", "Spring Boot", "GraphQL", "Bloomberg API"],
+//     featured: true,
+//   },
+//   {
+//     id: 2,
+//     title: "Healthcare Messaging System",
+//     description: "Cloud-native application supporting 890+ healthcare facilities with 97.9% uptime",
+//     image: "/secure-healthcare-messaging.png",
+//     tags: ["Java", "Azure Functions", "GraphQL", "HIPAA Compliance"],
+//     featured: true,
+//   },
+//   {
+//     id: 3,
+//     title: "ETL Data Pipeline",
+//     description: "Python-based pipeline processing 30,000+ financial records from Oracle databases",
+//     image: "/data-pipeline-flowchart.png",
+//     tags: ["Python", "SQL", "Oracle", "ETL"],
+//     featured: false,
+//   },
+//   {
+//     id: 4,
+//     title: "Microservices Architecture",
+//     description: "Transitioned monolithic systems to microservices, reducing deployment time by 30%",
+//     image: "/microservices-containers-diagram.png",
+//     tags: ["Kubernetes", "Docker", "Microservices", "CI/CD"],
+//     featured: false,
+//   },
+//   {
+//     id: 5,
+//     title: "RiderWeb Platform Migration",
+//     description: "Migrated mobile UI to web using React and TypeScript for Lyft's platform",
+//     image: "/placeholder-fmev2.png",
+//     tags: ["React", "TypeScript", "Node.js", "Kotlin"],
+//     featured: false,
+//   },
+//   {
+//     id: 6,
+//     title: "Performance Optimization Suite",
+//     description: "Database query optimization and API performance tuning for real-time systems",
+//     image: "/performance-monitoring-dashboard.png",
+//     tags: ["PostgreSQL", "Redis", "Datadog", "Performance Tuning"],
+//     featured: false,
+//   },
+// ]
 
 export function ProjectsSection() {
-  const [showAll, setShowAll] = useState(false)
-  const displayedProjects = showAll ? projects : projects.slice(0, 4)
-  const router = useRouter() 
+ const displayedProjects = useMemo(() => {
+    const showcaseProjects = projects.filter((p) => p.showcase)
+    const remainingProjects = projects.filter((p) => !p.showcase)
+
+    // Shuffle remaining projects
+    const shuffled = [...remainingProjects].sort(() => 0.5 - Math.random())
+
+    // Fill remaining slots to reach 6
+    const needed = 6 - showcaseProjects.length
+    const selected = shuffled.slice(0, needed)
+
+    return [...showcaseProjects, ...selected]
+  }, [])
 
   return (
     <section id="projects" className="py-10 px-8 bg-card/30">
@@ -84,16 +92,16 @@ export function ProjectsSection() {
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                {/* <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  <Button size="sm" variant="secondary">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Live Demo
-                  </Button>
-                  <Button size="sm" variant="outline">
-                    <Github className="h-4 w-4 mr-2" />
-                    Code
-                  </Button>
-                </div> */}
+                {project.link && (
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" variant="outline">
+                      <Github className="h-4 w-4 mr-2" />
+                      Code
+                    </Button>
+                  </Link>
+                  </div>
+                )}
               </div>
 
               <div className="p-6">
@@ -115,7 +123,7 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        {!showAll && projects.length > 4 && (
+        {/* {!showAll && projects.length > 4 && (
           <div className="text-center mt-12">
             <Button
               onClick={() => setShowAll(true)}
@@ -123,10 +131,10 @@ export function ProjectsSection() {
               size="lg"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-open-sans font-semibold"
             >
-              View All Projects
+              View More Projects
             </Button>
           </div>
-        )}
+        )} */}
       </div>
       <div className="flex justify-center">
         <Link
@@ -143,3 +151,4 @@ export function ProjectsSection() {
     </section>
   )
 }
+  

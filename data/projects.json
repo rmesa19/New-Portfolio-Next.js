@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "year":"2023",
+    "title": "Financial Data API Platform",
+    "description": "Scalable REST APIs serving real-time Bloomberg bond data. Reduced latency by 24% through query optimization.",
+    "made_at": "Fitch Group",
+    "image": "/financial-dashboard.png",
+    "tags": ["Java", "Spring Boot", "GraphQL", "Bloomberg API", "Oracle SQL"],
+    "featured": false
+  },
+  {
+    "id": 2,
+    "title": "Ambulatory Care Messaging System",
+    "year":"2022",
+    "made_at": "Northwell Health",
+    "description": "Cloud-native application supporting 890+ healthcare facilities with 97.9% uptime.",
+    "image": "/secure-healthcare-messaging.png",
+    "tags": ["Java", "Azure Functions", "GraphQL", "HIPAA Compliance"],
+    "featured": false
+  },
+  {
+    "id": 3,
+    "year": "2024",
+    "title": "ETL Data Pipeline",
+    "made_at": "Fitch Group",
+    "description": "Python-based pipeline for the extraction, transformation and loading of 30,000+ financial records from Oracle databases.",
+    "image": "/data-pipeline-flowchart.png",
+    "tags": ["Python", "Oracle SQL", "AWS"],
+    "tech": "Python, Oracle, AWS",
+    "link": null,
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "Monolithic Architecture Restructuring",
+    "made_at":"Fitch Group",
+    "description": "Transitioned monolithic systems to microservices, reducing deployment time by 30%",
+    "image": "/microservices-containers-diagram.png",
+    "tags": ["Kubernetes", "Docker", "Microservices", "CI/CD"],
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "RiderWeb Platform Migration",
+    "made_at":"Lyft",
+    "description": "Migrated mobile UI to web using React and TypeScript for Lyft's platform",
+    "image": "/riderweb.png",
+    "tags": ["React", "TypeScript", "Node.js", "Kotlin"],
+    "link":"https://ride.lyft.com/",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Performance Optimization Suite",
+    "made_at":"Fitch Group",
+    "description": "Database query optimization and API performance tuning for real-time systems",
+    "image": "/performance-monitoring-dashboard.png",
+    "tags": ["PostgreSQL", "Datadog", "Java Springboot"],
+    "featured": false
+  },
+  {
+      "id": 7,
+      "year": "2025",
+      "title": "Professional Portfolio",
+      "made_at": "Personal Project",
+      "description": "A reactive portfolio showcasing my skillset and experience",
+      "tech": "Next.js, Tailwind, TypeScript, Vercel",
+      "tags": ["Next.js", "Tailwind", "TypeScript", "Vercel"],
+      "link": "https://www.rudymesadieu.com/",
+      "featured":false,
+      "showcase":true,
+      "image":"/portfolio.png"
+    },
+    {
+      "id": 8,
+      "year": "2022",
+      "title": "Distributed Chatroom",
+      "made_at": "Northeastern University",
+      "description": "Auto reconnect and load balanced Distributed 2-Phase Commit(2PC) Chatroom application built using Java RMI (Remote Method Invocation) utilizing Pub/Sub paridigm. Built to facilitate realtime communication between users.",
+      "tech": "Java RMI, Java, TCP/IP",
+      "tags":["Java RMI", "Java", "TCP/IP"],
+      "link": "https://github.com/rmesa19/Distributed-ChatRoom/tree/main",
+      "featured":true,
+      "showcase":true,
+      "image":"/chatroom.png"
+    },  
+    {
+      "id": 9,
+      "year": "2023",
+      "title": "Funko Shop",
+      "made_at": "Northeastern University",
+      "description": "REACT app for taking inventory, comparing and trading Funko Pop collection.", 
+      "tech": "MongoDB, Express.js, React.js, Node.js",
+      "tags":["MongoDB", "Express.js", "React.js", "Node.js"],
+      "link": "https://github.com/rmesa19/The-Funko-Shop/tree/main",
+      "featured":false,
+      "image":"/funko.png"
+    },
+    {
+        "id":11,
+      "year": "2025",
+      "title": "Queens New York Fun Facts API",
+      "made_at": "Personal Project",
+      "description": "API built using Express framework, hosted via Vercel that pulls facts and tidbits about Queens, NY.",
+      "tech": "Node.js, Express.js, Vercel",
+      "tags":["Node.js", "Express.js", "Vercel"],
+      "link": null,
+      "featured":false,
+      "showcase":true,
+      "image":"/Unisphere.jpg"
+    },
+    {
+        "id":12,
+      "year": "2025",
+      "title": "Queens New York Fun Facts Database",
+      "made_at": "Personal Project",
+      "description": "Postgres Database built using data scraper that stores fun facts about Queens, NY across all neighborhoods in 10 categories.",
+      "tech": "Python, Postgres",
+      "tags":["Python", "Postgres"],
+      "link": null,
+      "featured":false,
+      "image":"/Unisphere.jpg"
+    }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Software Engineer",
+    "company": "Fitch Group",
+    "link":"https://www.fitch.group/",
+    "logo": "/fitchgroup_logo.jpeg",
+    "location": "New York, NY",
+    "period": "Sep 2023 - Present",
+    "description":
+      "Build, maintain and optimize scalable REST APIs using Java Spring Boot, serving real-time Bloomberg bond data to customer-facing applications.",
+    "achievements": [
+      "Improved platform scalability by cutting API latency 24% through query optimization and caching, directly enhancing user experience and reducing churn.",
+      "Delivered reliable financial insights by engineering an ETL pipeline that automated processing of 30K+ records daily, enabling near real-time reporting for finance and strategy teams.",
+      "Accelerated time-to-market by transitioning from monolith to microservices, reducing deployment times by 30% and aligning with company goals for faster product delivery.",
+      "Enhanced mobile performance by reducing GraphQL payload size 27%, improving load times for customers on low-bandwidth connections and supporting global growth objectives.",
+      "Increased engineering velocity by implementing automated CI/CD pipelines, raising release frequency 25% and aligning delivery speed with company innovation targets."
+    ]
+  },
+  {
+    "title": "Software Engineer",
+    "company": "Northwell Health",
+    "link": "https://www.northwell.edu/",
+    "logo": "/northwell-logo.png",
+    "location": "New York, NY",
+    "period": "Dec 2022 - Aug 2023",
+    "description":
+      "Developed secure, cloud-native applications using Java Spring Boot and GraphQL to support messaging for 890+ healthcare facilities.",
+    "achievements": [
+      "Increased system reliability by maintaining 97.9% uptime for healthcare messaging, supporting provider efficiency and patient communication goals.",
+      "Enabled scalable growth by integrating Azure Cloud services, aligning infrastructure with company objectives for resilient, cloud-native deployments.",
+      "Enhanced product innovation by implementing GraphQL interfaces, delivering real-time data transactions that improve responsiveness and customer satisfaction.",
+      "Protected patient trust by ensuring HIPAA compliance and rigorous security standards, meeting regulatory obligations and strengthening brand credibility."
+    ]
+  },
+  {
+    "title": "Software Engineer Intern",
+    "company": "Lyft",
+    "link": "https://www.lyft.com/",
+    "logo": "/lyft-logo.png",
+    "location": "New York, NY",
+    "period": "Jun 2022 - Sep 2022",
+    "description": "Migrated mobile UI experiences to web using React and TypeScript for the RiderWeb platform.",
+    "achievements": [
+      "Boosted platform performance by reducing average API call latency 16%, directly improving customer experience and retention.",
+      "Increased revenue opportunities by designing couponing and discount systems that aligned with company goals for customer acquisition and sales growth.",
+      "Drove cross-functional delivery by developing features across Node.js backends and Kotlin services, ensuring seamless integration within the broader tech ecosystem."
+    ]
+  }
+]
