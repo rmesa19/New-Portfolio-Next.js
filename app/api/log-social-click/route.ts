@@ -10,6 +10,10 @@ export async function POST(req: Request) {
     "Unknown";
 
   const ua = req.headers.get("user-agent") || "Unknown";
+  const country = req.headers.get("x-vercel-ip-country") || "Unknown";
+  const city = req.headers.get("x-vercel-ip-city") || "Unknown";
+  const region = req.headers.get("x-vercel-ip-country-region") || "Unknown";
+
 
   if (process.env.NODE_ENV === "production") {
     const { error } = await supabase.from("portfolio_audit").insert([
@@ -18,6 +22,9 @@ export async function POST(req: Request) {
         path: href,
         event_type: `social_click:${label.toLowerCase()}`, // e.g. social_click:github
         user_agent: ua,
+        country: country,
+        city: city,
+        region: region
       },
     ]);
     if (error) console.error("Supabase insert error:", error);

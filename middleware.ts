@@ -6,6 +6,10 @@ export async function middleware(req: NextRequest) {
   const ua = req.headers.get("user-agent") || "";
   const parser = new UAParser(ua);
   const result = parser.getResult();
+  const country = req.headers.get("x-vercel-ip-country") || "Unknown";
+  const city = req.headers.get("x-vercel-ip-city") || "Unknown";
+  const region = req.headers.get("x-vercel-ip-country-region") || "Unknown";
+
 
   const ip =
     req.headers.get("x-forwarded-for")?.split(",")[0] ||
@@ -19,6 +23,9 @@ export async function middleware(req: NextRequest) {
     browser: result.browser.name || "Unknown",
     os: result.os.name || "Unknown",
     user_agent: ua,
+    country: country,
+    city: city,
+    region: region
   };
 
   if (process.env.NODE_ENV === "production") {
