@@ -63,8 +63,8 @@ export function Sidebar() {
         <h1 className="text-2xl text-white">Rodolph Mesadieu</h1>
         <h2 className="text-lg font-medium text-white mt-.5 mb-4">Fullstack Engineer</h2>
         <p className="text-sm text-sidebar-foreground/70 mt-2">
-          I design, develop and deploy scalable, robust backend systems, distributed infrastructure, and visually appealing frontend
-          displays.
+          I create innovative business solutions through the design, development and deployment of scalable, robust backend systems, 
+          distributed infrastructure, and visually appealing frontend displays in alignment with business strategy.
         </p>
       </div>
 

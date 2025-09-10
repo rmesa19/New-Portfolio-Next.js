@@ -113,7 +113,7 @@
       "description": "API built using Express framework, hosted via Vercel that pulls facts and tidbits about Queens, NY.",
       "tech": "Node.js, Express.js, Vercel",
       "tags":["Node.js", "Express.js", "Vercel"],
-      "link": null,
+      "link": "https://queens-facts-api.vercel.app/api/facts?random=true",
       "featured":false,
       "showcase":true,
       "image":"/Unisphere.jpg"
