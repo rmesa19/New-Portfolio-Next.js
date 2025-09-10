@@ -63,9 +63,29 @@ export function Sidebar() {
         <h1 className="text-2xl text-white">Rodolph Mesadieu</h1>
         <h2 className="text-lg font-medium text-white mt-.5 mb-4">Fullstack Engineer</h2>
         <p className="text-sm text-sidebar-foreground/70 mt-2">
-          I create innovative business solutions through the design, development and deployment of scalable, robust backend systems, 
-          distributed infrastructure, and visually appealing frontend displays in alignment with business strategy.
+          Creating innovative business solutions via my Fullstack skillset.
+          {/* <br/><br/>
+          Design.<br/> Development.<br/> Deployment.<br/> Success.<br/>
+           */}
         </p>
+        <ul className="mt-4 space-y-2 text-sidebar-foreground">
+          <li className="flex items-center gap-2">
+            <span className="text-sm">✏️</span>
+            <span>Design.</span>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-xs">🏗️</span>
+            <span>Development.</span>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-xs">🚀</span>
+            <span>Deployment.</span>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-sm">✅</span>
+            <span>Success.</span>
+          </li>
+        </ul>
       </div>
 
       <nav className="px-4 space-y-2">

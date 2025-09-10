@@ -36,6 +36,19 @@ const socialLinks = [
   },
 ]
 
+const handleSocialClick = async (label: string, href: string) => {
+  try {
+    await fetch("/api/log-social-click", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ label, href }),
+    });
+  } catch (err) {
+    console.error("Social click log failed", err);
+  }
+};
+
+
 export function ContactSection() {
   return (
     <section id="contact" className="py-10 px-8 bg-card/30">
@@ -84,6 +97,7 @@ export function ContactSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-4 bg-card border border-border rounded-xl hover:border-primary/50 hover:bg-primary/10 transition-colors group"
+                    onClick={ ()=> handleSocialClick(social.label, social.href)}
                   >
                     <Icon className="h-6 w-6 text-muted-foreground group-hover:text-primary transition-colors" />
                   </a>

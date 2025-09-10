@@ -6,18 +6,20 @@ import { useRouter } from "next/navigation"
 
 export function HeroSection() {
 
-  const router = useRouter() 
+const downloadResume = async () => {
+  const pdfUrl = "/files/resume.pdf";
 
-  const downloadResume = () => {
-  const pdfUrl = "/files/resume.pdf"; 
-  window.open(pdfUrl, "_blank");
-  // const a = document.createElement("a");
-  // a.href = pdfUrl;
-  // a.download = "Rodolph_Mesadieu_Resume.pdf"; 
-  // document.body.appendChild(a);
-  // a.click();
-  // document.body.removeChild(a);
+  try {
+    await fetch("/api/log-resume-click", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (err) {
+    console.error("Resume click log failed", err);
   }
+
+  window.open(pdfUrl, "_blank");
+};
 
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
