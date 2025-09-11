@@ -71,7 +71,7 @@ export function Sidebar() {
         <ul className="mt-4 space-y-2 text-sidebar-foreground">
           <li className="flex items-center gap-2">
             <span className="text-sm">✏️</span>
-            <span>Design.</span>
+            <span>Architecture.</span>
           </li>
           <li className="flex items-center gap-2">
             <span className="text-xs">🏗️</span>
