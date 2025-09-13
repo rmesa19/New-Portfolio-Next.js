@@ -1,3 +1,5 @@
+"use client"
+
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import projects from "@/data/projects.json"
@@ -58,6 +60,18 @@ export default function ArchivePage() {
 
   const sortedProjects = projects.sort((a,b)=> Number(b.year) - Number(a.year));
 
+  const handleProjectClick = async (title: string, year: string, link: string) => {
+    try {
+      await fetch("/api/log-project-click", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title, year, link }),
+      });
+    } catch (err) {
+      console.error("Project click log failed", err);
+    }
+  };
+
 return (
     <>
       {/* Back Arrow */}
@@ -102,6 +116,7 @@ return (
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary underline hover:text-primary/80"
+                        onClick={() => handleProjectClick(proj.title, proj.year, proj.link!)}
                       >
                         Visit
                       </a>
