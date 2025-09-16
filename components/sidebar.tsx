@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Home, User, Briefcase, Mail, FolderOpen, Heart } from "lucide-react"
+import { Home, User, Briefcase, Mail, FolderOpen, Heart, School } from "lucide-react"
 
 const navigation = [
   { name: "Home", href: "#home", icon: Home },
   { name: "About", href: "#about", icon: User },
   { name: "Projects", href: "#projects", icon: FolderOpen },
   { name: "Experience", href: "#experience", icon: Briefcase },
+  { name: "Education", href: "#education", icon: School},
   { name: "Hobbies", href: "#hobbies", icon: Heart },
   { name: "Contact", href: "#contact", icon: Mail },
 ]
@@ -63,7 +64,7 @@ export function Sidebar() {
         <h1 className="text-2xl text-white">Rodolph Mesadieu</h1>
         <h2 className="text-lg font-medium text-white mt-.5 mb-4">Fullstack Engineer</h2>
         <p className="text-sm text-sidebar-foreground/70 mt-2">
-          Creating innovative business solutions via my Fullstack skillset.
+          Creating innovative business solutions via Fullstack skillset.
           {/* <br/><br/>
           Design.<br/> Development.<br/> Deployment.<br/> Success.<br/>
            */}

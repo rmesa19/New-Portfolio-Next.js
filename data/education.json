@@ -1,0 +1,37 @@
+[
+  {
+    "school": "Northeastern University",
+    "degree": "Master of Science in Computer Science",
+    "link": "https://www.khoury.northeastern.edu/",
+    "logo": "/northeastern-logo.png",
+    "location": "Boston, MA",
+    "period": "2021 - 2023",
+    "achievements": [
+      "Algorithms", 
+      "Scalable Distributed Systems", 
+      "Machine Learning",
+      " Object-Oriented Programming", 
+      "Database Management", 
+      "Web Development",
+      "Mobile Application Development", 
+      "GEM Fellowship Recipient", 
+      "Code4TheCulture Club Member" 
+    ]
+  },
+  {
+    "school": "St. Joseph's University",
+    "degree": "Bachelor of Science in Chemistry",
+    "link": "https://www.sjny.edu/about/university",
+    "logo": "/stjosephs-logo.png",
+    "location": "Brooklyn, NY",
+    "period": "2012 - 2016",
+    "achievements": [
+      "Graduated summa cum laude",
+      "NCAA Basketball team member",
+      "Dean’s List all semesters",
+      "Student Government Association",
+      "President Black Students Association",
+      "Level 4 Team Leader"
+    ]
+  }
+]

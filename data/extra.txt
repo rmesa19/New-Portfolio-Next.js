@@ -1,0 +1,13 @@
+  {
+    "school": "St. John's University School of Law",
+    "link": "https://www.stjohns.edu/law",
+    "logo": "/saintjohns-logo.png",
+    "location": "Queens, NY",
+    "period": "2017 - 2018",
+    "achievements": [
+      "Completed Prestigious 1LCLD Scholar Program",
+      "1L Summer Associateship at Nixon Peabody",
+      "NEBLSA Board Member",
+      "Thurgood Marshall Mock Trial Competition Competitor"
+    ]
+  },
