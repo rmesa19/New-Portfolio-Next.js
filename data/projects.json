@@ -108,12 +108,12 @@
     {
         "id":11,
       "year": "2025",
-      "title": "Queens New York Borough Facts API",
+      "title": "Queens New York Facts",
       "made_at": "Personal Project",
-      "description": "API built using Express framework, hosted via Vercel that pulls facts and tidbits about Queens, NY.",
+      "description": "Trendy website that pulls facts and tidbits about my home, Queens, NY. Hosted via Vercel",
       "tech": "Node.js, Express.js, Vercel",
-      "tags":["Node.js", "Express.js", "Vercel"],
-      "link": "https://queens-facts-api.vercel.app/api/facts?random=true",
+      "tags":["Node.js", "Express.js", "Vercel", "Supabase"],
+      "link": "https://queens-facts.vercel.app",
       "featured":false,
       "showcase":true,
       "image":"/Unisphere.jpg"
@@ -123,10 +123,10 @@
       "year": "2025",
       "title": "Queens New York Borough Facts Database",
       "made_at": "Personal Project",
-      "description": "Postgres Database built using data scraper that stores fun facts about Queens, NY across all neighborhoods in 10 categories.",
-      "tech": "Python, Postgres",
-      "tags":["Python", "Postgres"],
-      "link": null,
+      "description": "Postgres Supabase Database built using data scraper that stores fun facts about Queens, NY across all neighborhoods in 10 categories. Sourced via Node.js API. Deployed via Vercel",
+      "tech": "Python, Postgres, Supabase",
+      "tags":["Python", "Postgres", "Supabase"],
+      "link": "https://queens-facts.vercel.app/api/facts?random=true",
       "featured":false,
       "image":"/Unisphere.jpg"
     }
