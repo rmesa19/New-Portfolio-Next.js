@@ -9,6 +9,7 @@ export function HeroSection() {
 const downloadResume = async () => {
   const pdfUrl = "/files/resume.pdf";
 
+  window.open(pdfUrl, "_blank");
   try {
     await fetch("/api/log-resume-click", {
       method: "POST",
@@ -18,7 +19,6 @@ const downloadResume = async () => {
     console.error("Resume click log failed", err);
   }
 
-  window.open(pdfUrl, "_blank");
 };
 
   return (
