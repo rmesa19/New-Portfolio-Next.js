@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { UAParser } from "ua-parser-js";
-import { supabase } from "./lib/supabase"; 
+import { supabase } from "./lib/supabase-server"; 
 
 export async function middleware(req: NextRequest) {
   const ua = req.headers.get("user-agent") || "";
