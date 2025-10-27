@@ -21,6 +21,19 @@ const downloadResume = async () => {
 
 };
 
+const goToMedium = async () => {
+  window.open("https://medium.com/@rmesadieu", "_blank");
+   try {
+    await fetch("/api/log-article-click", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (err) {
+    console.error("Resume click log failed", err);
+  }
+
+};
+
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -48,6 +61,14 @@ const downloadResume = async () => {
           >
             {/* <Download className="mr-2 h-5 w-5" /> */}
             View Resume
+          </Button>
+           <Button
+            size="lg"
+            className="bg-primary/80 hover:bg-primary text-primary-foreground font-open-sans font-semibold"
+            onClick={goToMedium}
+          >
+            {/* <Download className="mr-2 h-5 w-5" /> */}
+            View Articles
           </Button>
           {/* <Button
             size="lg"
