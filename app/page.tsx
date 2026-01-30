@@ -10,7 +10,7 @@ import { EducationSection } from "@/components/education-section"
 export default function HomePage() {
   const fetchRandomFact = async () => {
       try {
-        const res = await fetch("/api/facts?random=true&limit=1")
+        const res = await fetch("https://queens-facts.vercel.app/api/facts?random=true&limit=1")
         const data = await res.json()
         if (Array.isArray(data) && data.length > 0) {
           return data[0]
@@ -29,7 +29,7 @@ export default function HomePage() {
     setTimeout(async () => {
       const fact = await fetchRandomFact();
 
-      await fetch("/api/audit", {
+      await fetch("https://queens-facts.vercel.app/api/audit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
